@@ -8,7 +8,9 @@ export function initHeroVideo() {
   let stagnantChecks = 0;
 
   function updateControl() {
-    toggle.textContent = userPaused ? '▶' : 'Ⅱ';
+    toggle.innerHTML = userPaused
+      ? '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M8 5L19 12L8 19Z" fill="currentColor"/></svg>'
+      : '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 5H10V19H7ZM14 5H17V19H14Z" fill="currentColor"/></svg>';
     toggle.setAttribute('aria-label', userPaused ? 'Reproducir video de fondo' : 'Pausar video de fondo');
   }
 

@@ -19,7 +19,9 @@ export function initCarousel() {
   const speed = 30;
 
   function sync() {
-    pause.textContent = paused ? '▶' : 'Ⅱ';
+    pause.innerHTML = paused
+      ? '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M8 5L19 12L8 19Z" fill="currentColor"/></svg>'
+      : '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 5H10V19H7ZM14 5H17V19H14Z" fill="currentColor"/></svg>';
     pause.setAttribute('aria-label', paused ? 'Reanudar recomendaciones' : 'Pausar recomendaciones');
     pause.setAttribute('aria-pressed', String(paused));
   }

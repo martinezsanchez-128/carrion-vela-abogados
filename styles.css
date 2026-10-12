@@ -332,3 +332,12 @@ footer { padding-right: 100px; }
 }
 #reviews-pause:hover { color: var(--text); }
 
+
+/* SVG de reproducción uniforme: evita sustitución por emoji en tablets. */
+#reviews-pause svg, #video-toggle svg {
+  display: block;
+  width: 20px;
+  height: 20px;
+  color: inherit;
+  pointer-events: none;
+}
